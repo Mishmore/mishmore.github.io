@@ -1,0 +1,3 @@
+$(_ => {
+  $(".button-collapse").sideNav();
+})
