@@ -1,10 +1,85 @@
+@import "colors";
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+.navbar-fixed {
+  height: 95px;
+  @media (max-width: 992px) {
+    height: 90px;
+  }
+}
+nav {
+  padding: 0 30px;
+  height: 95px;
+  background-color: $main-grey;
+  @media (max-width: 992px) {
+    height: 90px;
+    padding: 0 20px;
+  }
+  .brand-logo {
+    background: url(../img/logo_name-01.svg) no-repeat;
+    background-size: contain;
+    width: 230px;
+    height: 50px;
+    display: inline-block;
+    transform: translateY(50%);
+    @media (max-width: 992px) {
+      background: url(../img/logo_michellemore.svg) no-repeat;
+      transform: translate(-50%, 60%);
+      width: 86px;
+      height: 39px;
+    }
+  }
+  .button-collapse {
+    display: inline-block;
+    width: 15px;
+    height: 2px;
+    background-color: $main-light;
+    position: absolute;
+    top: 40px;
+    left: -4px;
+  }
+  .button-collapse::before {
+    content: '';
+    background-color: $main-color;
+    top: 6px;
+    @extend .button-collapse;
+  }
+  .button-collapse::after {
+    content: '';
+    background-color: $main-color;
+    top: -6px;
+    @extend .button-collapse;
+  }
+  ul.right {
+    transform: translateY(25%);
+    a {
+      color: $main-color;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+  }
+  ul.side-nav {
+    width: 230px;
+    background-color: $main-light;
+  }
+}
+@media only screen and (min-width: 601px) {
+  nav a.button-collapse {
+    height: 2px;
+  }
+}
 .hero {
   width: 100%;
-  height: 90vh;
-  background: url(../img/portada.png) no-repeat center;
+  height: 540px;
+  background: url(../img/portada.png) no-repeat 80% center;
   background-size: cover;
+  h2 {
+    margin: 0 0 1rem 0;
+  }
 }
-
-nav {
-  height: 10vh;
+#sidenav-overlay {
+  z-index: 0;
 }

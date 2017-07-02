@@ -1,0 +1,72 @@
+body {
+  font-family: 'Nunito', sans-serif; }
+
+.navbar-fixed {
+  height: 95px; }
+  @media (max-width: 992px) {
+    .navbar-fixed {
+      height: 90px; } }
+
+nav {
+  padding: 0 30px;
+  height: 95px;
+  background-color: #4D404A; }
+  @media (max-width: 992px) {
+    nav {
+      height: 90px;
+      padding: 0 20px; } }
+  nav .brand-logo {
+    background: url(../img/logo_name-01.svg) no-repeat;
+    background-size: contain;
+    width: 230px;
+    height: 50px;
+    display: inline-block;
+    transform: translateY(50%); }
+    @media (max-width: 992px) {
+      nav .brand-logo {
+        background: url(../img/logo_michellemore.svg) no-repeat;
+        transform: translate(-50%, 60%);
+        width: 86px;
+        height: 39px; } }
+  nav .button-collapse, nav .button-collapse::before, nav .button-collapse::after {
+    display: inline-block;
+    width: 15px;
+    height: 2px;
+    background-color: #EFEFEF;
+    position: absolute;
+    top: 40px;
+    left: -4px; }
+  nav .button-collapse::before {
+    content: '';
+    background-color: #99D2C4;
+    top: 6px; }
+  nav .button-collapse::after {
+    content: '';
+    background-color: #99D2C4;
+    top: -6px; }
+  nav ul.right {
+    transform: translateY(25%); }
+    nav ul.right a {
+      color: #99D2C4;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+      font-weight: 300; }
+  nav ul.side-nav {
+    width: 230px;
+    background-color: #EFEFEF; }
+
+@media only screen and (min-width: 601px) {
+  nav a.button-collapse, nav a.button-collapse::before, nav a.button-collapse::after {
+    height: 2px; } }
+.hero {
+  width: 100%;
+  height: 540px;
+  background: url(../img/portada.png) no-repeat 80% center;
+  background-size: cover; }
+  .hero h2 {
+    margin: 0 0 1rem 0; }
+
+#sidenav-overlay {
+  z-index: 0; }
+
+/*# sourceMappingURL=main.css.map */
