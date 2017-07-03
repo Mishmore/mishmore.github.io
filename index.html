@@ -17,25 +17,78 @@
         <a href="#!" class="brand-logo"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Portafolio</a></li>
-          <li><a href="#">Acerca de mi</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#about">Acerca de mi</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="#">Portafolio</a></li>
-          <li><a href="#">Acerca de mi</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#about">Acerca de mi</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </div>
     </nav>
   </div>
   <section id="hero" class="hero">
-    <h2>Hola, soy Michelle More,</h2>
-    <h2>Desarrolladora Front-end</h2>
+    <div class="container">
+      <h2>Hola, soy Michelle More,</h2>
+      <h2>Desarrolladora Front-end</h2>
+    </div>
   </section>
-  <section>
-    <h1>fdfdsf</h1>
+  <section id="about" class="about padding-section">
+    <div class="container">
+      <h3 class="center-align margin-b-h3">Acerca de mi</h3>
+      <h4>Skills</h4>
+    </div>
   </section>
+  <section id="portfolio" class="portfolio padding-section">
+    <div class="container">
+      <div class="row">
+        <h3 class="margin-b-h3">Portafolio</h3>
+        <div class="col s4 fixed">
+          <h4>Yape</h4>
+          <a href="https://yape-app.herokuapp.com/" target="_blank" class="center-align">Ver demo</a>
+        </div>
+        <div class="col s8 offset-s4 relative">
+          <img src="assets\img\yape.png" alt="yape mockup" class="responsive-img">
+          <a class="overlay z-depth-1" href="yape.html" target="_blank">
+            <div class="text">Ver caso</div>
+          </a>
+        </div>
+        <div class="col s4 fixed">
+          <h4>Pokeapi</h4>
+          <a href="https://mishmore.github.io/pokedex/" target="_blank" class="center-align">Ver demo</a>
+        </div>
+        <div class="col s8 offset-s4 relative">
+          <img src="assets\img\yape.png" alt="yape mockup" class="responsive-img">
+          <a class="overlay z-depth-1" href="pokedex.html" target="_blank">
+            <div class="text">Ver caso</div>
+          </a>
+        </div>
+        <div class="col s4 fixed">
+          <h4>Gasfinder</h4>
+          <a href="https://mishmore.github.io/gasfinder-app/" target="_blank" class="center-align">Ver demo</a>
+        </div>
+        <div class="col s8 offset-s4 relative">
+          <img src="assets\img\yape.png" alt="yape mockup" class="responsive-img">
+          <a class="overlay z-depth-1" href="gasfinder.html" target="_blank">
+            <div class="text">Ver caso</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact padding-section">
+    <div class="container">
+      <h3 class="center-align margin-b-h3">Contacto</h3>
+      <p>983 523 934</p>
+      <p>michellemore28@gmail.com</p>
+    </div>
+  </section>
+  <footer class="center-align">
+    <p>Coded by Michelle More Flores</p>
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="assets\js\materialize.min.js" charset="utf-8"></script>
   <script src="assets\js\app.js" charset="utf-8"></script>

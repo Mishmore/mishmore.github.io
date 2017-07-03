@@ -1,19 +1,21 @@
 $(_ => {
   $(".button-collapse").sideNav();
-})
-/*
-$(_ => {
-  const fixedNav = $('.navbar__content--shadow');
+
+  const fixedCol = $('.portfolio .col.s4');
+  const fixedNav = $('.navbar-fixed');
+  let lastScroll = 0;
+  console.log(fixedCol);
 
   $(window).scroll(function(e) {
-    const cursorY = $(window).scrollTop();
-    console.log(cursorY);
-    if (cursorY > 100) {
-      fixedNav.show();
-      fixedNav.css('display', 'flex');
+    const currScroll = $(window).scrollTop();
+    console.log(currScroll);
+    if (currScroll > lastScroll && currScroll > 150) {
+      console.log('ocultar');
+      fixedNav.css('top', '-100px');
     } else {
-      fixedNav.hide();
+      console.log('mostrar');
+      fixedNav.css('top', '0');
     }
+     lastScroll = currScroll;
   });
 })
-*/

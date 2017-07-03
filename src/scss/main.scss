@@ -1,16 +1,35 @@
 @import "colors";
+@import "fonts";
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: $pfdin;
+  color: $main-grey;
+}
+h1,h2,h3,h4,h5 {
+  font-family: $nunito;
+}
+.relative {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
+.margin-b-h3 {
+  margin-top: 0px;
+  margin-bottom: 60px;
+}
+.padding-section {
+  padding: 50px 0;
 }
 .navbar-fixed {
   height: 95px;
+  transition: .2s ease;
   @media (max-width: 992px) {
     height: 90px;
   }
 }
 nav {
-  padding: 0 30px;
+  padding: 0 60px;
   height: 95px;
   background-color: $main-grey;
   @media (max-width: 992px) {
@@ -59,6 +78,7 @@ nav {
       letter-spacing: 2px;
       font-size: 1.1rem;
       font-weight: 300;
+      font-family: $nunito;
     }
   }
   ul.side-nav {
@@ -73,13 +93,66 @@ nav {
 }
 .hero {
   width: 100%;
-  height: 540px;
+  height: 543px;
   background: url(../img/portada.png) no-repeat 80% center;
   background-size: cover;
   h2 {
+    color: $main-dark;
     margin: 0 0 1rem 0;
   }
 }
 #sidenav-overlay {
   z-index: 0;
+}
+.about {
+  background-color: $main-grey;
+  height: 750px;
+  h3 {
+    color: $main-color;
+  }
+}
+.portfolio {
+  background-image: url(../img/pattern-03-03.svg);
+  background-attachment: fixed;
+
+  a {
+    display: inline-block;
+  }
+  .col.s8 {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  img {
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $main-color;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    font-weight: 300;
+  }
+
+  .relative:hover .overlay {
+    width: 100%;
+  }
+  .text {
+    white-space: nowrap;
+    color: $main-grey;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .text:hover {
+    color: $main-light;
+  }
 }

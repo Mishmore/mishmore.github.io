@@ -1,0 +1,20 @@
+{
+  "name": "mishmore.github.io",
+  "version": "1.0.0",
+  "description": "Portafolio de Michelle",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch src/scss/main.scss:assets/css/main.css -t compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mishmore/mishmore.github.io.git"
+  },
+  "author": "Mishmore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mishmore/mishmore.github.io/issues"
+  },
+  "homepage": "https://github.com/Mishmore/mishmore.github.io#readme"
+}
