@@ -242,3 +242,28 @@ nav {
   align-items: center;
   justify-content: center;
 }
+.pattern {
+  background-image: url(../img/pattern-03-03.svg);
+  background-attachment: fixed;
+}
+.over-pattern {
+  background-color: $main-light;
+  border-radius: 2px;
+  p {
+    @extend %letter-config;
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+  .title {
+    background-color: $main-grey;
+    padding: 30px;
+    h1 {
+      color: $main-color;
+      font-weight: 300;
+      margin: 0 0 0 0;
+    }
+  }
+  h3 {
+    color: $main-dark;
+  }
+}
