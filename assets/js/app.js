@@ -23,11 +23,14 @@ $(_ => {
   });
 
   const spaceAnimate = 340;
-  const initialAnimate = 1360;
+  const initialAnimate = 1330;
 
   $(window).scroll(function(e) {
     const currScroll = $(window).scrollTop();
     console.log(currScroll);
+    if (currScroll < initialAnimate) {
+      portfolioTitle.removeClass('fixed');
+    }
     if (currScroll > initialAnimate) {
       portfolioTitle.addClass('fixed');
       portfolioTitle.css('top', '80px');
@@ -38,22 +41,25 @@ $(_ => {
     if (currScroll > 1700) {
       proj1.css('left', '-350px');
     }
-    if (currScroll > 2750 || currScroll < 1360) {
-      portfolioTitle.removeClass('fixed');
-      portfolioTitle.css('top', '0');
+    if (currScroll > 2750 || currScroll < 1330) {
       proj1.css('left', '-350px');
     }
-    if (currScroll > 1836) {
+    if (currScroll > 1992) {
+      proj3.css('left', '-350px');
       proj2.css('left', '13.5%');
     }
     if (currScroll > 2346) {
       proj2.css('left', '-350px');
     }
-    if (currScroll > 2436) {
+    if (currScroll > 2600) {
       proj3.css('left', '13.5%');
     }
     if (currScroll > 2946) {
+      portfolioTitle.css('left', '-350px');
       proj3.css('left', '-350px');
+    }
+    if (currScroll <= 2946) {
+      portfolioTitle.css('left', '13.5%');
     }
   });
 })
