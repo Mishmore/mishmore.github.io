@@ -8,6 +8,10 @@ body {
 h1,h2,h3,h4,h5 {
   font-family: $nunito;
 }
+%letter-config {
+  font-weight: 200;
+  letter-spacing: .4px;
+}
 .relative {
   position: relative;
 }
@@ -99,7 +103,7 @@ nav {
   height: 543px;
   background: url(../img/portada.png) no-repeat 80% center;
   background-size: cover;
-  h2 {
+  h3 {
     color: $main-dark;
     margin: 0 0 1rem 0;
   }
@@ -110,8 +114,13 @@ nav {
 .about {
   background-color: $main-grey;
   height: 750px;
-  h3 {
+  h3, h4 {
     color: $main-color;
+  }
+  p {
+    color: $main-light;
+    @extend %letter-config;
+    font-size: 1.3rem;
   }
 }
 .portfolio {
@@ -177,4 +186,45 @@ nav {
   .text:hover {
     color: $main-light;
   }
+}
+.contact {
+  height: 78vh;
+  h3 {
+    color: $main-dark;
+  }
+  span {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-right: 15px;
+    color: $main-dark;
+  }
+  p {
+    display: inline-block;
+    @extend %letter-config;
+    font-size: 1.4rem;
+    color: $main-dark;
+  }
+  .col.m4 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .social {
+    display: inline-block;
+    font-size: 2rem;
+    color: $main-dark;
+    margin: 25px 10px;
+    text-align: right;
+  }
+  .social:hover {
+    color: $main-color;
+  }
+}
+.footer {
+  height: 10vh;
+  background-color: $main-grey;
+  color: $main-light;
+  @extend %letter-config;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
