@@ -33,7 +33,7 @@ $(_ => {
     }
     if (currScroll > initialAnimate) {
       portfolioTitle.addClass('fixed');
-      portfolioTitle.css('top', '80px');
+      portfolioTitle.css('top', '120px');
       portfolioTitle.css('margin', '0');
       proj1.css('left', '13.5%');
       proj2.css('left', '-350px');
