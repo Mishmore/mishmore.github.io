@@ -136,7 +136,7 @@ nav {
 .about {
   background-color: $main-grey;
   height: 750px;
-  h3, h4 {
+  h3, h4, h5 {
     color: $main-color;
     @extend %title-config;
   }
@@ -144,6 +144,21 @@ nav {
     color: $main-light;
     @extend %letter-config;
     font-size: 1.3rem;
+  }
+  h4 {
+    margin-top: 60px;
+  }
+  .skills-list {
+    h5 {
+      letter-spacing: 1px;
+      color: $main-light;
+    }
+    p {
+      text-align: center;
+      font-size: .9rem;
+      text-transform: uppercase;
+      color: $main-color;
+    }
   }
 }
 .portfolio {
