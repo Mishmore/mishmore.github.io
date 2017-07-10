@@ -161,12 +161,19 @@ nav {
     }
   }
 }
+.square-link {
+  display: inline-block;
+  border: 1px solid;
+  padding: 0 10px;
+  color: $accent;
+  transition: 0.15s ease-in;
+}
+.square-link:hover {
+  transform: translateY(15%);
+}
 .portfolio {
   background-image: url(../img/pattern-03-03.svg);
   background-attachment: fixed;
-  a {
-    display: inline-block;
-  }
   h3 {
     transition: .3s;
     @extend %title-config;
@@ -275,6 +282,7 @@ nav {
 }
 .case {
   padding: 40px 0;
+
   p {
     font-weight: 300;
     letter-spacing: 1.3px;
