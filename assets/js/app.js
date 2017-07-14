@@ -66,31 +66,43 @@ $(_ => {
 const YPos = {
   hero       : 0,
   aboutPos   : $("#about").offset().top,
-  firstProj  : $("#portfolio").offset().top,
-  secondProj : $(".project2").offset().top,
-  thirdProj  : $(".project3").offset().top,
+  firstProj  : $("#portfolio").offset().top + 50,
+  secondProj : $("#p2").offset().top - 200,
+  thirdProj  : $("#p3").offset().top,
   contactPos : $("#contact").offset().top,
 }
+console.log(YPos.secondProj);
 
 const arrPos = [YPos.hero, YPos.aboutPos, YPos.firstProj, YPos.secondProj, YPos.thirdProj, YPos.contactPos];
 
-$(window).on('keyup', (event) => {
+$(window).on('keyup keypress', (event) => {
   const currPos = $(window).scrollTop();
   if (event.which == downKey) {
-    if (currPos == YPos.hero) {
-      //event.preventDefault();
+    if (currPos > YPos.hero && currPos < YPos.aboutPos) {
       Scroll(YPos.aboutPos);
     }
-    else if (currPos >= YPos.aboutPos && currPos < YPos.firstProj) {
+    if (currPos >= YPos.aboutPos && currPos < YPos.firstProj) {
       Scroll(YPos.firstProj);
+      return false;
+    }
+    if (currPos > YPos.firstProj) {
+      console.log(YPos.secondProj + 'segundo proj');
+      Scroll(YPos.secondProj);
+      return false;
     }
   }
+
   else if (event.which == upKey) {
     if (currPos <= YPos.aboutPos) {
       Scroll(YPos.hero);
+      return false;
     }
     if (currPos <= YPos.firstProj) {
       Scroll(YPos.aboutPos);
+      return false;
+    }
+    if (currPos <= YPos.secondProj && currPos > YPos.firstProj) {
+      Scroll(YPos.firstProj);
     }
   }
 });
