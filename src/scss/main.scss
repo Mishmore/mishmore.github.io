@@ -154,8 +154,22 @@ nav {
   z-index: 0;
 }
 .about {
+  background-color: #ffffff;
+  h3, h4, h5 {
+    color: $main-color;
+    @extend %title-config;
+  }
+  p {
+    color: $main-grey;
+    @extend %letter-config;
+    font-size: 1.3rem;
+  }
+  h4 {
+    margin-top: 60px;
+  }
+}
+.skills {
   background-color: $main-grey;
-  //height: 750px;
   h3, h4, h5 {
     color: $main-color;
     @extend %title-config;
@@ -180,6 +194,7 @@ nav {
       color: $main-color;
     }
   }
+
 }
 .square-link {
   display: inline-block;
