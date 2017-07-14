@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1197.6 712" style="enable-background:new 0 0 1197.6 712;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#DDDDDD;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{display:none;}
+	.st3{fill:url(#Motivo_nuevo);}
+</style>
+<pattern  x="1836" y="-945" width="87" height="48" patternUnits="userSpaceOnUse" id="Motivo_nuevo" viewBox="43.8 -59.1 87 48" style="overflow:visible;">
+	<g>
+		<rect x="43.8" y="-59.1" class="st0" width="87" height="48"/>
+		<g>
+			<polyline class="st1" points="130.8,-0.3 152.5,-22 174.3,-0.3 			"/>
+			<line class="st1" x1="138.9" y1="-22" x2="130.8" y2="-13.8"/>
+			<polyline class="st1" points="130.8,-0.3 109,-22 87.3,-0.3 			"/>
+			<line class="st1" x1="122.6" y1="-22" x2="100.8" y2="-0.3"/>
+			<line class="st1" x1="130.8" y1="-13.8" x2="122.6" y2="-22"/>
+		</g>
+		<g>
+			<polyline class="st1" points="43.8,-0.3 65.5,-22 87.3,-0.3 			"/>
+			<line class="st1" x1="73.7" y1="-0.3" x2="51.9" y2="-22"/>
+			<line class="st1" x1="51.9" y1="-22" x2="43.8" y2="-13.8"/>
+			<polyline class="st1" points="43.8,-0.3 22,-22 0.3,-0.3 			"/>
+			<line class="st1" x1="43.8" y1="-13.8" x2="35.6" y2="-22"/>
+		</g>
+		<g>
+			<polyline class="st1" points="174.3,-24.3 152.5,-46 130.8,-24.3 			"/>
+		</g>
+		<g>
+			<polyline class="st1" points="87.3,-24.3 109,-46 130.8,-24.3 			"/>
+			<line class="st1" x1="117.2" y1="-24.3" x2="95.4" y2="-46"/>
+			<line class="st1" x1="95.4" y1="-46" x2="87.3" y2="-37.8"/>
+			<polyline class="st1" points="87.3,-24.3 65.5,-46 43.8,-24.3 			"/>
+			<line class="st1" x1="79.1" y1="-46" x2="57.3" y2="-24.3"/>
+			<line class="st1" x1="87.3" y1="-37.8" x2="79.1" y2="-46"/>
+		</g>
+		<g>
+			<polyline class="st1" points="0.3,-24.3 22,-46 43.8,-24.3 			"/>
+		</g>
+		<g>
+			<polyline class="st1" points="130.8,-48.3 152.5,-70 174.3,-48.3 			"/>
+			<polyline class="st1" points="130.8,-48.3 109,-70 87.3,-48.3 			"/>
+			<line class="st1" x1="122.6" y1="-70" x2="100.8" y2="-48.3"/>
+		</g>
+		<g>
+			<polyline class="st1" points="43.8,-48.3 65.5,-70 87.3,-48.3 			"/>
+			<line class="st1" x1="73.7" y1="-48.3" x2="51.9" y2="-70"/>
+			<polyline class="st1" points="43.8,-48.3 22,-70 0.3,-48.3 			"/>
+		</g>
+	</g>
+</pattern>
+<g id="images">
+	
+		<image style="display:none;overflow:visible;" width="1366" height="768" xlink:href="CB9F1229.jpg"  transform="matrix(1 0 0 1 -1012.946 -134.9904)">
+	</image>
+	
+		<image style="display:none;overflow:visible;" width="1366" height="768" xlink:href="CB9F122B.jpg"  transform="matrix(1 0 0 1 155.0936 -87)">
+	</image>
+	<g class="st2">
+	</g>
+</g>
+<g id="guides" class="st2">
+</g>
+<g id="vectors">
+	<rect x="-100" y="-31" class="st3" width="1366" height="798"/>
+</g>
+<g id="text">
+</g>
+</svg>

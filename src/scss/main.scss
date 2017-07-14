@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5 {
   height: 60px;
   transition: .2s ease;
   @media (max-width: 992px) {
-    height: 90px;
+    height: 60px;
   }
 }
 .grey-light {
@@ -58,7 +58,7 @@ nav {
   line-height: 60px;
   background-color: $main-grey;
   @media (max-width: 992px) {
-    height: 90px;
+    height: 60px;
     padding: 0 20px;
   }
   .brand-logo {
@@ -70,7 +70,7 @@ nav {
     transform: translateY(30%);
     @media (max-width: 992px) {
       background: url(../img/logo_michellemore.svg) no-repeat;
-      transform: translate(-50%, 60%);
+      transform: translate(-50%, 30%);
       width: 86px;
       height: 39px;
     }
@@ -81,7 +81,7 @@ nav {
     height: 2px;
     background-color: $main-light;
     position: absolute;
-    top: 40px;
+    top: 28px;
     left: -4px;
   }
   .button-collapse::before {
@@ -126,7 +126,11 @@ nav {
   height: 580px;
   background: url(../img/portada.png) no-repeat left 30%;
   background-size: cover;
+  background-color: darken($main-color, 10%);
   color: $main-light;
+  @media (max-width: 992px) {
+    background: darken($main-color, 10%);
+  }
   .row {
     position: absolute;
     top: 20vh;
@@ -188,7 +192,8 @@ nav {
   transform: translateY(15%);
 }
 .portfolio {
-  background-image: url(../img/pattern-03-03.svg);
+  background-image: url(../img/pattern.png);
+  background-repeat: repeat;
   background-attachment: fixed;
   h3 {
     transition: .3s;

@@ -1,3 +1,4 @@
+console.log('hola');
 $(_ => {
   $(".button-collapse").sideNav();
 
@@ -64,7 +65,6 @@ $(_ => {
 
 const downKey = 40;
 const upKey = 38;
-let downCounter = 0;
 
 const YPos = {
   hero       : 0,
@@ -116,12 +116,16 @@ $(window).on('keyup keypress wheel', (event) => {
     }
     if (currPos <= YPos.secondProj && currPos > YPos.firstProj) {
       Scroll(YPos.firstProj);
+      return false;
     }
     if (currPos <= YPos.thirdProj && currPos > YPos.secondProj) {
       Scroll(YPos.secondProj);
+      return false;
     }
     if (currPos <= YPos.contactPos && currPos > YPos.thirdProj) {
       Scroll(YPos.thirdProj);
+      return false;
     }
   }
 });
+console.log(navigator.userAgent);
