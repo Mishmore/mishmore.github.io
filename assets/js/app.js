@@ -26,7 +26,7 @@ $(_ => {
 
   $(window).scroll(function(e) {
     const currScroll = $(window).scrollTop();
-    //console.log(currScroll);
+    console.log(currScroll);
     if (currScroll < initialAnimate) {
       portfolioTitle.removeClass('fixed');
     }
@@ -63,7 +63,8 @@ $(_ => {
   });
 })
 
-const scrollPos = {
+const YPos = {
+  hero       : 0,
   aboutPos   : $("#about").offset().top,
   firstProj  : $("#portfolio").offset().top,
   secondProj : $(".project2").offset().top,
@@ -71,7 +72,28 @@ const scrollPos = {
   contactPos : $("#contact").offset().top,
 }
 
-console.log(scrollPos.currPos);
+const arrPos = [YPos.hero, YPos.aboutPos, YPos.firstProj, YPos.secondProj, YPos.thirdProj, YPos.contactPos];
+
+$(window).on('keyup', (event) => {
+  const currPos = $(window).scrollTop();
+  if (event.which == downKey) {
+    if (currPos == YPos.hero) {
+      //event.preventDefault();
+      Scroll(YPos.aboutPos);
+    }
+    else if (currPos >= YPos.aboutPos && currPos < YPos.firstProj) {
+      Scroll(YPos.firstProj);
+    }
+  }
+  else if (event.which == upKey) {
+    if (currPos <= YPos.aboutPos) {
+      Scroll(YPos.hero);
+    }
+    if (currPos <= YPos.firstProj) {
+      Scroll(YPos.aboutPos);
+    }
+  }
+});
 
 const aboutPos = $("#about").offset().top;
 const firstProj = 1512;
@@ -84,22 +106,23 @@ const currScroll = $(window).scrollTop();
 let downCounter = 0;
 $("#about").offset().top;
 
+/*
 $(window).on('keydown', (event) => {
 
   if (event.which == upKey) {
     --downCounter;
-    //console.log('up'+downCounter);
     doScrollKey();
-    console.log('up'+downCounter);
+    //console.log('up'+downCounter);
   }
   else if (event.which == downKey ) {
-    //console.log('down'+downCounter);
     ++downCounter;
     doScrollKey();
 
-    console.log('down'+downCounter);
+    //console.log('down'+downCounter);
   }
 });
+*/
+
 /*
 $(window).scroll(function(e) {
   let lastScroll = 0;
