@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5 {
   margin-bottom: 60px;
 }
 .padding-section {
-  padding: 90px 0 40px 0;
+  padding: 120px 0 120px 0;
 }
 .navbar-fixed {
   height: 60px;
@@ -103,7 +103,7 @@ nav {
       font-size: 1.1rem;
       font-weight: 300;
       font-family: $nunito;
-      transition: .2s;
+      transition: .25s;
     }
     a:hover {
       background-color: inherit;
@@ -151,7 +151,7 @@ nav {
 }
 .about {
   background-color: $main-grey;
-  height: 750px;
+  //height: 750px;
   h3, h4, h5 {
     color: $main-color;
     @extend %title-config;

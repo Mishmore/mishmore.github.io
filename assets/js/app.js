@@ -63,3 +63,14 @@ $(_ => {
     }
   });
 })
+
+let aboutPos = 671;
+const downKey = 40;
+
+$(window).on('keydown', (event) => {
+  if (event.which == downKey) {
+     $('body').animate({
+         scrollTop: aboutPos}
+         ,700);
+    }
+});
