@@ -63,7 +63,17 @@ $(_ => {
   });
 })
 
-const aboutPos = 671;
+const scrollPos = {
+  aboutPos   : $("#about").offset().top,
+  firstProj  : $("#portfolio").offset().top,
+  secondProj : $(".project2").offset().top,
+  thirdProj  : $(".project3").offset().top,
+  contactPos : $("#contact").offset().top,
+}
+
+console.log(scrollPos.currPos);
+
+const aboutPos = $("#about").offset().top;
 const firstProj = 1512;
 const secondProj = 2308;
 const thirdProj = 2980;
@@ -72,23 +82,25 @@ const downKey = 40;
 const upKey = 38;
 const currScroll = $(window).scrollTop();
 let downCounter = 0;
-
+$("#about").offset().top;
 
 $(window).on('keydown', (event) => {
+
   if (event.which == upKey) {
-    //downCounter--;
-    console.log('up'+downCounter);
+    --downCounter;
+    //console.log('up'+downCounter);
     doScrollKey();
     console.log('up'+downCounter);
   }
   else if (event.which == downKey ) {
-    console.log('down'+downCounter);
+    //console.log('down'+downCounter);
+    ++downCounter;
     doScrollKey();
-    //downCounter++;
+
     console.log('down'+downCounter);
   }
 });
-
+/*
 $(window).scroll(function(e) {
   let lastScroll = 0;
   const currScroll = $(window).scrollTop();
@@ -99,7 +111,7 @@ $(window).scroll(function(e) {
       downCounter = 1;
     }
 });
-
+*/
 const doScrollKey = () => {
   switch (downCounter) {
     case 0:
