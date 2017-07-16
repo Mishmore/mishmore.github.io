@@ -1,5 +1,12 @@
-console.log('hola');
 $(_ => {
+  //FadeIn de logo intro
+  const fadeInScreen = setTimeout(() => {
+    $('.logo-animated-front').fadeOut(400);
+    $('.logo-animated-back').fadeOut(400);
+    $('.black-in').fadeOut(2000);
+    $('body').removeClass('no-scroll');
+  }, 3500);
+
   $(".button-collapse").sideNav();
 
   const fixedNav = $('.navbar-fixed');
@@ -26,7 +33,6 @@ $(_ => {
 
   $(window).scroll(function(e) {
     const currScroll = $(window).scrollTop();
-    console.log(currScroll);
     if (currScroll < initialAnimate) {
       portfolioTitle.removeClass('fixed');
     }
@@ -63,16 +69,20 @@ $(_ => {
   });
 });
 
+
+
+
 const downKey = 40;
 const upKey = 38;
 
 const YPos = {
   hero       : 0,
   aboutPos   : $("#about").offset().top,
+  skillsPos   : $("#skills").offset().top,
   firstProj  : $("#portfolio").offset().top + 50,
   secondProj : $("#p2").offset().top - 200,
   thirdProj  : $("#p3").offset().top - 200,
-  contactPos : $("#contact").offset().top,
+  contactPos : $("#contact").offset().top
 }
 
 const Scroll = (section) => {
@@ -81,13 +91,17 @@ const Scroll = (section) => {
        ,700);
 }
 
-$(window).on('keyup keypress wheel', (event) => {
+$(window).on('keyup keypress', (event) => {
   const currPos = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop;
   if (event.which == downKey) {
     if (currPos > YPos.hero && currPos < YPos.aboutPos) {
       Scroll(YPos.aboutPos);
     }
-    if (currPos >= YPos.aboutPos && currPos < YPos.firstProj) {
+    if (currPos >= YPos.aboutPos && currPos < YPos.skillsPos) {
+      Scroll(YPos.skillsPos);
+      return false;
+    }
+    if (currPos >= YPos.skillsPos && currPos < YPos.firstProj) {
       Scroll(YPos.firstProj);
       return false;
     }
@@ -128,4 +142,42 @@ $(window).on('keyup keypress wheel', (event) => {
     }
   }
 });
-console.log(navigator.userAgent);
+
+const aboutText = $('.about-text');
+const skillsText = $('.skills-text');
+
+$(window).scroll(function(e) {
+  const currPos = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop;
+  if (currPos >= YPos.aboutPos-550) {
+    aboutText.addClass('animated fadeInUp');
+  }
+  if (currPos >= YPos.skillsPos-550) {
+    skillsText.addClass('animated fadeInUp');
+  }
+});
+/*
+document.addEventListener("wheel", function(e) {
+  const currPos = window.pageYOffset || document.documentElement.scrollTop;
+  let delta;
+  if (event.wheelDelta) {
+      delta = event.wheelDelta;
+  } else {
+    delta = -1 *event.deltaY;
+  }
+
+  if (delta < 0) {
+      console.log('down');
+      if (currPos > YPos.hero && currPos < YPos.aboutPos) {
+        Scroll(YPos.aboutPos);
+      }
+  }
+
+  else if (delta > 0) {
+      console.log('up');
+      if (currPos <= YPos.aboutPos) {
+        Scroll(YPos.hero);
+      }
+  }
+
+}, false);
+*/
