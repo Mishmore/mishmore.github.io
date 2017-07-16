@@ -84,7 +84,7 @@ svg[class*="logo-animated-"] {
 
 .case-link {
     @extend %square-link;
-    color: $secondary-blue;
+    color: $accent;
 }
 
 .demo-link {
@@ -109,11 +109,24 @@ rect[class*="rect-"] {
 }
 
 .rect-case {
-    stroke: $secondary-blue;
+    stroke: $accent;
 }
 
 .rect-demo {
     stroke: $accent-complementary;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.links {
+    @media (max-width: 992px) {
+        width: 185px;
+        margin: 0 auto;
+    }
 }
 
 @keyframes dashRect {
@@ -344,6 +357,9 @@ nav {
 .portfolio {
     height: 300vh;
     position: relative;
+    @media (max-width: 992px) {
+        height: auto;
+    }
     h3 {
         color: $main-dark;
         font-weight: 400;
@@ -383,6 +399,7 @@ nav {
         margin-bottom: 170px;
         @media (max-width: 992px) {
             margin-bottom: 50px;
+            margin-top: 20px;
         }
     }
     img {
