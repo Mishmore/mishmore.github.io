@@ -11,12 +11,8 @@ $(_ => {
 
   const fixedNav = $('.navbar-fixed');
   const portfolioTitle = $('.portfolio h3');
-  const proj1 = $('.project1');
-  const proj2 = $('.project2');
-  const proj3 = $('.project3');
 
   let lastScroll = 0;
-
   $(window).scroll((e) => {
     const currScroll = $(window).scrollTop();
     if (currScroll > lastScroll && currScroll > 150) {
@@ -27,50 +23,6 @@ $(_ => {
     }
      lastScroll = currScroll;
   });
-
-  const spaceAnimate = 340;
-  const initialAnimate = 1330;
-
-  $(window).scroll(function(e) {
-    const currScroll = $(window).scrollTop();
-    if (currScroll < initialAnimate) {
-      portfolioTitle.removeClass('fixed');
-    }
-    if (currScroll > initialAnimate) {
-      portfolioTitle.addClass('fixed');
-      portfolioTitle.css('top', '120px');
-      portfolioTitle.css('margin', '0');
-      proj1.css('left', '13.5%');
-      proj2.css('left', '-350px');
-    }
-    if (currScroll > 1700) {
-      proj1.css('left', '-350px');
-    }
-    if (currScroll > 2750 || currScroll < 1330) {
-      proj1.css('left', '-350px');
-    }
-    if (currScroll > 1992) {
-      proj3.css('left', '-350px');
-      proj2.css('left', '13.5%');
-    }
-    if (currScroll > 2346) {
-      proj2.css('left', '-350px');
-    }
-    if (currScroll > 2600) {
-      proj3.css('left', '13.5%');
-    }
-    if (currScroll > 2946) {
-      portfolioTitle.css('left', '-350px');
-      proj3.css('left', '-350px');
-    }
-    if (currScroll <= 2946) {
-      portfolioTitle.css('left', '13.5%');
-    }
-  });
-});
-
-
-
 
 const downKey = 40;
 const upKey = 38;
@@ -124,8 +76,12 @@ $(window).on('keyup keypress', (event) => {
       Scroll(YPos.hero);
       return false;
     }
-    if (currPos <= YPos.firstProj) {
+    if (currPos <= YPos.skillsPos) {
       Scroll(YPos.aboutPos);
+      return false;
+    }
+    if (currPos <= YPos.firstProj) {
+      Scroll(YPos.skillsPos);
       return false;
     }
     if (currPos <= YPos.secondProj && currPos > YPos.firstProj) {
@@ -143,18 +99,45 @@ $(window).on('keyup keypress', (event) => {
   }
 });
 
-const aboutText = $('.about-text');
-const skillsText = $('.skills-text');
+let last = 0;
 
-$(window).scroll(function(e) {
-  const currPos = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop;
-  if (currPos >= YPos.aboutPos-550) {
-    aboutText.addClass('animated fadeInUp');
-  }
-  if (currPos >= YPos.skillsPos-550) {
-    skillsText.addClass('animated fadeInUp');
-  }
+  $(window).scroll(function(e) {
+    const currPos = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop;
+    if (currPos > last) {
+      last = currPos;
+      if (currPos >= YPos.aboutPos-550) {
+        $('.about-text').addClass('animated fadeInUp');
+      }
+      if (currPos >= YPos.skillsPos-550) {
+        $('.skills-text').addClass('animated fadeInUp');
+      }
+      if (currPos >= YPos.firstProj-550) {
+        $('.portfolio h3').addClass('fixed');
+        $('.project-1').addClass('animated fadeInLeft');
+      }
+      if (currPos >= YPos.secondProj-250) {
+        $('.project-2').addClass('animated fadeInLeft');
+      }
+      if (currPos >= YPos.thirdProj-250) {
+        $('.project-3').addClass('animated fadeInLeft');
+      }
+      if (currPos >= YPos.contactPos-300) {
+        $('.portfolio h3').removeClass('fixed');
+      }
+
+    }
+    else if (currPos < last) {
+      console.log('subiendo');
+      console.log(last);
+    }
+  });
+
+  const spaceAnimate = 340;
+  const initialAnimate = YPos.firstProj;
+
 });
+
+
 /*
 document.addEventListener("wheel", function(e) {
   const currPos = window.pageYOffset || document.documentElement.scrollTop;

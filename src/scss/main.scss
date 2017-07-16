@@ -88,6 +88,7 @@ h1,h2,h3,h4,h5 {
 %letter-config {
   font-weight: 300;
   letter-spacing: 1.3px;
+  font-size: 1.1rem;
 }
 %title-config {
   letter-spacing: 6px;
@@ -97,17 +98,17 @@ h1,h2,h3,h4,h5 {
   position: relative;
 }
 .fixed {
-  position: fixed;
-}
-.top-col-left {
-  top: 220px;
+  position: fixed !important;
 }
 .margin-b-h3 {
   margin-top: 0px;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 .padding-section {
   padding: 120px 0 120px 0;
+  @media (max-width: 992px) {
+    padding: 70px 0 70px 0;
+  }
 }
 .navbar-fixed {
   height: 60px;
@@ -220,6 +221,7 @@ nav {
   }
   h5 {
     @extend %letter-config;
+    font-size: 1.4rem;
   }
 }
 #sidenav-overlay {
@@ -227,33 +229,30 @@ nav {
 }
 .about {
   @include sectionSize(#ffffff);
-  h3, h4, h5 {
-    color: $main-dark;
+  color: $main-dark;
+  h3, h5 {
     @extend %title-config;
   }
-  p {
-    color: $main-dark;
-    @extend %letter-config;
-    font-size: 1.3rem;
+  h5 {
+    color: darken($main-color, 10%);
+    font-weight: 400;
   }
-  h4 {
-    margin-top: 60px;
+  p {
+    @extend %letter-config;
   }
 }
 .skills {
   @include sectionSize($main-grey);
   h3, h4, h5 {
-    color: $main-color;
     @extend %title-config;
+    color: $main-color;
   }
   p {
-    color: $main-light;
     @extend %letter-config;
-    font-size: 1.3rem;
+    color: $main-light;
+    font-size: 1.2rem;
   }
-  h4 {
-    margin-top: 60px;
-  }
+
   .skills-list {
     h5 {
       letter-spacing: 1px;
@@ -279,8 +278,13 @@ nav {
   transform: translateY(15%);
 }
 .portfolio {
+  height: 300vh;
+  position: relative;
   h3 {
+    color: $main-dark;
     transition: .3s;
+    position: absolute;
+    top: 120px;
     @extend %title-config;
     @media (max-width: 992px) {
       position: static !important;
@@ -291,20 +295,30 @@ nav {
     @extend %title-config;
     color: saturate($main-color, 30%);
     color: $main-dark;
-  }
-  .col.m2 {
-    @extend %letter-config;
-    transition: .3s;
-    left: -350px;
-    font-size: 1.2rem;
     @media (max-width: 992px) {
-      position: relative;
+      text-align: center;
     }
   }
-  .col.l8 {
+  p {
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+  }
+  div[class*="project-"] {
+    @extend %letter-config;
+    transition: .3s;
+    margin-top: 130px;
+    @media (max-width: 992px) {
+      position: relative;
+      margin-top: 0;
+    }
+  }
+  .img-col {
     padding: 0;
-    margin-top: 100px;
     margin-bottom: 170px;
+    @media (max-width: 992px) {
+      margin-bottom: 50px;
+    }
   }
   img {
     display: block;
@@ -378,12 +392,16 @@ nav {
 }
 .footer {
   height: 10vh;
+  width: 100%;
   background-color: $main-grey;
   color: $main-light;
   @extend %letter-config;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 992px) {
+    height: auto;
+  }
 }
 .case > .col {
   padding: 0;
