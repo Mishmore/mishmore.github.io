@@ -1,476 +1,492 @@
 @import "colors";
 @import "fonts";
-
 * {
-  outline: none;
+    outline: none;
 }
 
 @mixin sectionSize($bg-color) {
-  width: 100%;
-  height: 100vh;
-  background-color: $bg-color;
-  @media (max-width: 992px) {
-    height: auto;
-  }
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-color;
+    @media (max-width: 992px) {
+        height: auto;
+    }
 }
 
 .no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .black-in {
-  height: 100vh;
-  width: 100%;
-  background-color: $main-grey;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: $main-grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 svg[class*="logo-animated-"] {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.m-logo-front {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation: dashFront 5s linear alternate infinite;
-}
-
-.m-logo-back {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dashBack 5s linear alternate infinite;
-}
-
-@keyframes dashFront {
-  from {
-    stroke-dashoffset: 300;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dashBack {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.title-code::before {
-  content: '<';
-  top: 0;
-}
-
-.title-code::after {
-  content: '>';
-  top: 0;
-}
-
-.rectangle {
-  width: 35px;
-  height: 10px;
-  stroke-dasharray: 100;
-}
-
-.square-link:hover .rectangle {
-  color: blue;
-  animation: dashRect 2s linear alternate infinite;
-}
-
-@keyframes dashRect {
-  from {
-    stroke-dashoffset: 100;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-body {
-  font-family: $pfdin;
-  color: $main-grey;
-}
-h1,h2,h3,h4,h5 {
-  font-family: $nunito;
-}
-.justify-text {
-  text-align: justify;
-}
-%letter-config {
-  font-weight: 300;
-  letter-spacing: 1.3px;
-  font-size: 1.1rem;
-}
-%title-config {
-  letter-spacing: 6px;
-  font-weight: 100;
-}
-.relative {
-  position: relative;
-}
-.fixed {
-  position: fixed !important;
-}
-.margin-b-h3 {
-  margin-top: 0px;
-  margin-bottom: 45px;
-}
-.padding-section {
-  padding: 120px 0 120px 0;
-  @media (max-width: 992px) {
-    padding: 70px 0 70px 0;
-  }
-}
-.navbar-fixed {
-  height: 60px;
-  transition: .2s ease;
-  @media (max-width: 992px) {
-    height: 60px;
-  }
-}
-.grey-light {
-  color: $main-grey-light;
-}
-.row .col {
-  padding: 0 1.1rem;
-}
-nav {
-  padding: 0 60px;
-  height: 60px;
-  line-height: 60px;
-  background-color: $main-grey;
-  box-shadow: none;
-  @media (max-width: 992px) {
-    height: 60px;
-    padding: 0 20px;
-  }
-  .brand-logo {
-    background: url(../img/logo_name-01.svg) no-repeat;
-    background-size: contain;
-    width: 230px;
-    height: 38px;
-    display: inline-block;
-    transform: translateY(30%);
-    @media (max-width: 992px) {
-      background: url(../img/logo_michellemore.svg) no-repeat;
-      transform: translate(-50%, 30%);
-      width: 86px;
-      height: 39px;
-    }
-  }
-  .button-collapse {
-    display: inline-block;
-    width: 15px;
-    height: 2px;
-    background-color: $main-light;
     position: absolute;
-    top: 28px;
-    left: -4px;
-  }
-  .button-collapse::before {
-    content: '';
-    background-color: $main-color;
-    top: 6px;
-    @extend .button-collapse;
-  }
-  .button-collapse::after {
-    content: '';
-    background-color: $main-color;
-    top: -6px;
-    @extend .button-collapse;
-  }
-  ul.right {
-    a {
-      color: $main-color;
-      letter-spacing: 2px;
-      font-size: 1.1rem;
-      font-weight: 100;
-      font-family: $nunito;
-      transition: .25s;
-    }
-    a:hover {
-      background-color: inherit;
-      color: $main-light;
-    }
-  }
-  ul.side-nav {
-    width: 230px;
-    background-color: $main-light;
-  }
-}
-@media only screen and (min-width: 601px) {
-  nav a.button-collapse {
-    height: 2px;
-  }
-}
-.hero {
-  @include sectionSize(darken($main-color, 10%));
-  height: 95vh;
-  position: relative;
-  background: url(../img/portada.png) no-repeat left 30%;
-  background-size: cover;
-  background-attachment: fixed;
-  color: $main-light;
-  @media (max-width: 992px) {
-    background: darken($main-color, 10%);
-    height: 100vh;
-  }
-  .row {
-    position: absolute;
-    top: 20vh;
-    width: 80%;
-  }
-  h3 {
-    margin: 0;
-  }
-  .keyword, .wrap {
-    color: $main-dark;
-  }
-  .h3 {
-    font-size: 2.92rem;
-    font-family: $nunito;
-  }
-  h5 {
-    @extend %letter-config;
-    font-size: 1.4rem;
-  }
-}
-#sidenav-overlay {
-  z-index: 0;
-}
-.about {
-  @include sectionSize(#ffffff);
-  color: $main-dark;
-  h3, h5 {
-    @extend %title-config;
-  }
-  h5 {
-    color: darken($main-color, 10%);
-    font-weight: 400;
-  }
-  p {
-    @extend %letter-config;
-  }
-}
-.skills {
-  @include sectionSize($main-grey);
-  h3, h4, h5 {
-    @extend %title-config;
-    color: $main-color;
-  }
-  p {
-    @extend %letter-config;
-    color: $main-light;
-    font-size: 1.2rem;
-  }
-
-  .skills-list {
-    h5 {
-      letter-spacing: 1px;
-      color: $main-light;
-    }
-    p {
-      text-align: center;
-      font-size: .9rem;
-      text-transform: uppercase;
-      color: $main-color;
-    }
-  }
-
-}
-.square-link {
-  display: inline-block;
-  border: 1px solid;
-  padding: 0 10px;
-  color: $accent;
-  transition: 0.15s ease-in;
-}
-.square-link:hover {
-  transform: translateY(15%);
-}
-.portfolio {
-  height: 300vh;
-  position: relative;
-  h3 {
-    color: $main-dark;
-    transition: .3s;
-    position: absolute;
-    top: 120px;
-    @extend %title-config;
-    @media (max-width: 992px) {
-      position: static !important;
-      text-align: center;
-    }
-  }
-  h4 {
-    @extend %title-config;
-    color: saturate($main-color, 30%);
-    color: $main-dark;
-    @media (max-width: 992px) {
-      text-align: center;
-    }
-  }
-  p {
-    @media (max-width: 992px) {
-      text-align: center;
-    }
-  }
-  div[class*="project-"] {
-    @extend %letter-config;
-    transition: .3s;
-    margin-top: 130px;
-    @media (max-width: 992px) {
-      position: relative;
-      margin-top: 0;
-    }
-  }
-  .img-col {
-    padding: 0;
-    margin-bottom: 170px;
-    @media (max-width: 992px) {
-      margin-bottom: 50px;
-    }
-  }
-  img {
-    display: block;
-  }
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: $main-color;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
-    font-weight: 100;
-    opacity: 0;
-  }
-
-  .relative:hover .overlay {
-    opacity: 1;
-  }
-
-  .text {
-    @extend %letter-config;
-    white-space: nowrap;
-    color: $main-grey;
-    font-size: 20px;
-    position: absolute;
-    overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
-  .text:hover {
-    color: $main-light;
-  }
 }
-.contact {
-  height: 80vh;
-  h3 {
-    @extend %title-config;
-    color: $main-dark;
-  }
-  span {
-    display: inline-block;
-    font-size: 1.4rem;
-    margin-right: 15px;
-    color: $main-dark;
-  }
-  p {
-    display: inline-block;
-    @extend %letter-config;
-    font-size: 1.4rem;
-    color: $main-dark;
-  }
-  .col.m4 {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .social {
-    display: inline-block;
-    font-size: 2rem;
-    color: $main-dark;
-    margin: 12px 10px;
-    text-align: right;
-  }
-  .social:hover {
-    color: $main-color;
-  }
-}
-.footer {
-  height: 10vh;
-  width: 100%;
-  background-color: $main-grey;
-  color: $main-light;
-  @extend %letter-config;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 992px) {
-    height: auto;
-  }
-}
-.case > .col {
-  padding: 0;
-}
-.case {
-  padding: 40px 0;
 
-  p {
-    font-weight: 100;
-    letter-spacing: 1.3px;
-    font-size: 1.2rem;
-  }
-  h1, h4 {
-    @extend %title-config;
-    color: $main-dark;
-    font-weight: 100;
-    margin: 0 0 0 0;
-  }
-  h1 {
-    margin-bottom: 50px;
-    padding: 0 1.1rem !important;
-  }
-  h5 {
-    color: #59cbaf;
-    font-weight: 100;
-    letter-spacing: 1.3px;
-    font-size: 1.2rem;
-  }
-  .pattern {
-    background-image: url(../img/pattern-03-03.svg);
-    background-attachment: fixed;
-  }
-  .over-pattern {
-    background-color: $main-light;
-    border-radius: 2px;
-  }
-  .brand-logo-dark {
-    background: url(../img/logo_name-dark-01.svg) no-repeat;
-    background-size: contain;
-    width: 235px;
-    height: 35px;
-    display: inline-block;
-    margin-bottom: 90px;
-  }
-  section {
-    margin-bottom: 50px;
-    .quote {
-      font-size: 1.6rem;
-      color: lighten($main-grey, 30%);
+.m-logo-front {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: dashFront 5s linear alternate infinite;
+}
+
+.m-logo-back {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dashBack 5s linear alternate infinite;
+}
+
+@keyframes dashFront {
+    from {
+        stroke-dashoffset: 300;
     }
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dashBack {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.title-code::before {
+    content: '<';
+    top: 0;
+}
+
+.title-code::after {
+    content: '>';
+    top: 0;
+}
+
+%square-link {
+    position: absolute;
+    width: 100%;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -54%);
+}
+
+.case-link {
+    @extend %square-link;
+    color: $secondary-blue;
+}
+
+.demo-link {
+    @extend %square-link;
+    color: $accent-complementary;
+}
+
+.rectangle-div {
+    position: relative;
+    display: inline-block;
+}
+
+.rectangle-div:hover rect[class*="rect-"] {
+    animation: dashRect 1s ease;
+}
+
+rect[class*="rect-"] {
+    stroke-dasharray: 240;
+    fill: none;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.rect-case {
+    stroke: $secondary-blue;
+}
+
+.rect-demo {
+    stroke: $accent-complementary;
+}
+
+@keyframes dashRect {
+    from {
+        stroke-dashoffset: 240;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+body {
+    font-family: $pfdin;
+    color: $main-grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $nunito;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+%letter-config {
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    font-size: 1.1rem;
+}
+
+%title-config {
+    letter-spacing: 6px;
+    font-weight: 100;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+.margin-b-h3 {
+    margin-top: 0px;
+    margin-bottom: 45px;
+}
+
+.padding-section {
+    padding: 120px 0 120px 0;
+    @media (max-width: 992px) {
+        padding: 70px 0 70px 0;
+    }
+}
+
+.navbar-fixed {
+    height: 60px;
+    transition: .2s ease;
+    @media (max-width: 992px) {
+        height: 60px;
+    }
+}
+
+.grey-light {
+    color: $main-grey-light;
+}
+
+.row .col {
+    padding: 0 1.1rem;
+}
+
+nav {
+    padding: 0 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: $main-grey;
+    box-shadow: none;
+    @media (max-width: 992px) {
+        height: 60px;
+        padding: 0 20px;
+    }
+    .brand-logo {
+        background: url(../img/logo_name-01.svg) no-repeat;
+        background-size: contain;
+        width: 230px;
+        height: 38px;
+        display: inline-block;
+        transform: translateY(30%);
+        @media (max-width: 992px) {
+            background: url(../img/logo_michellemore.svg) no-repeat;
+            transform: translate(-50%, 30%);
+            width: 86px;
+            height: 39px;
+        }
+    }
+    .button-collapse {
+        display: inline-block;
+        width: 15px;
+        height: 2px;
+        background-color: $main-light;
+        position: absolute;
+        top: 28px;
+        left: -4px;
+    }
+    .button-collapse::before {
+        content: '';
+        background-color: $main-color;
+        top: 6px;
+        @extend .button-collapse;
+    }
+    .button-collapse::after {
+        content: '';
+        background-color: $main-color;
+        top: -6px;
+        @extend .button-collapse;
+    }
+    ul.right {
+        a {
+            color: $main-color;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            font-weight: 100;
+            font-family: $nunito;
+            transition: .25s;
+        }
+        a:hover {
+            background-color: inherit;
+            color: $main-light;
+        }
+    }
+    ul.side-nav {
+        width: 230px;
+        background-color: $main-light;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    nav a.button-collapse {
+        height: 2px;
+    }
+}
+
+.hero {
+    @include sectionSize(darken($main-color, 10%));
+    height: 95vh;
+    position: relative;
+    background: url(../img/portada.png) no-repeat left 30%;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $main-light;
+    @media (max-width: 992px) {
+        background: darken($main-color, 10%);
+        height: 100vh;
+    }
+    .row {
+        position: absolute;
+        top: 20vh;
+        width: 80%;
+    }
+    h3 {
+        margin: 0;
+    }
+    .keyword,
+    .wrap {
+        color: $main-dark;
+    }
+    .h3 {
+        font-size: 2.92rem;
+        font-family: $nunito;
+    }
+    h5 {
+        @extend %letter-config;
+        font-size: 1.4rem;
+    }
+}
+
+#sidenav-overlay {
+    z-index: 0;
+}
+
+.about {
+    @include sectionSize(#ffffff);
+    color: $main-dark;
+    h3,
+    h5 {
+        @extend %title-config;
+    }
+    h5 {
+        color: darken($main-color, 10%);
+        font-weight: 400;
+    }
+    p {
+        @extend %letter-config;
+    }
+}
+
+.skills {
+    @include sectionSize($main-grey);
+    h3,
+    h4,
+    h5 {
+        @extend %title-config;
+        color: $main-color;
+    }
+    p {
+        @extend %letter-config;
+        color: $main-light;
+        font-size: 1.2rem;
+    }
+    .skills-list {
+        h5 {
+            letter-spacing: 1px;
+            color: $main-light;
+        }
+        p {
+            text-align: center;
+            font-size: .9rem;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+    }
+}
+
+.portfolio {
+    height: 300vh;
+    position: relative;
+    h3 {
+        color: $main-dark;
+        font-weight: 400;
+        transition: .3s;
+        position: absolute;
+        top: 120px;
+        @extend %title-config;
+        @media (max-width: 992px) {
+            position: static !important;
+            text-align: center;
+        }
+    }
+    h4 {
+        @extend %title-config;
+        color: saturate($main-color, 30%);
+        color: $main-dark;
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+    }
+    p {
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+    }
+    div[class*="project-"] {
+        @extend %letter-config;
+        transition: .3s;
+        margin-top: 130px;
+        @media (max-width: 992px) {
+            position: relative;
+            margin-top: 0;
+        }
+    }
+    .img-col {
+        padding: 0;
+        margin-bottom: 170px;
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+    img {
+        display: block;
+    }
+}
+
+.contact {
+    height: 80vh;
+    h3 {
+        @extend %title-config;
+        color: $main-dark;
+    }
+    span {
+        display: inline-block;
+        font-size: 1.4rem;
+        margin-right: 15px;
+        color: $main-dark;
+    }
+    p {
+        display: inline-block;
+        @extend %letter-config;
+        font-size: 1.4rem;
+        color: $main-dark;
+    }
+    .col.m4 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .social {
+        display: inline-block;
+        font-size: 2rem;
+        color: $main-dark;
+        margin: 12px 10px;
+        text-align: right;
+    }
+    .social:hover {
+        color: $main-color;
+    }
+}
+
+.footer {
+    height: 10vh;
+    width: 100%;
+    background-color: $main-grey;
+    color: $main-light;
+    @extend %letter-config;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 992px) {
+        height: auto;
+    }
+}
+
+.case>.col {
+    padding: 0;
+}
+
+.case {
+    padding: 40px 0;
+    p {
+        font-weight: 100;
+        letter-spacing: 1.3px;
+        font-size: 1.2rem;
+    }
+    h1,
+    h4 {
+        @extend %title-config;
+        color: $main-dark;
+        font-weight: 100;
+        margin: 0 0 0 0;
+    }
+    h1 {
+        margin-bottom: 50px;
+        padding: 0 1.1rem !important;
+    }
+    h5 {
+        color: #59cbaf;
+        font-weight: 100;
+        letter-spacing: 1.3px;
+        font-size: 1.2rem;
+    }
+    .pattern {
+        background-image: url(../img/pattern-03-03.svg);
+        background-attachment: fixed;
+    }
+    .over-pattern {
+        background-color: $main-light;
+        border-radius: 2px;
+    }
+    .brand-logo-dark {
+        background: url(../img/logo_name-dark-01.svg) no-repeat;
+        background-size: contain;
+        width: 235px;
+        height: 35px;
+        display: inline-block;
+        margin-bottom: 90px;
+    }
+    section {
+        margin-bottom: 50px;
+        .quote {
+            font-size: 1.6rem;
+            color: lighten($main-grey, 30%);
+        }
+    }
 }

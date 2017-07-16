@@ -3,7 +3,7 @@ $(_ => {
   const fadeInScreen = setTimeout(() => {
     $('.logo-animated-front').fadeOut(400);
     $('.logo-animated-back').fadeOut(400);
-    $('.black-in').fadeOut(2000);
+    $('.black-in').addClass('animated slideOutRight');
     $('body').removeClass('no-scroll');
   }, 3500);
 
@@ -112,19 +112,15 @@ let last = 0;
         $('.skills-text').addClass('animated fadeInUp');
       }
       if (currPos >= YPos.firstProj-550) {
-        $('.portfolio h3').addClass('fixed');
-        $('.project-1').addClass('animated fadeInLeft');
+        $('.project-1').addClass('animated fadeInLeftBig');
       }
       if (currPos >= YPos.secondProj-250) {
-        $('.project-2').addClass('animated fadeInLeft');
+        $('.project-2').addClass('animated fadeInLeftBig');
       }
       if (currPos >= YPos.thirdProj-250) {
-        $('.project-3').addClass('animated fadeInLeft');
+        $('.project-3').addClass('animated fadeInLeftBig');
       }
-      if (currPos >= YPos.contactPos-300) {
-        $('.portfolio h3').removeClass('fixed');
-      }
-
+   
     }
     else if (currPos < last) {
       console.log('subiendo');
