@@ -549,13 +549,19 @@ nav {
     }
 }
 
-.hero-case {
+div[class*="hero-case"] {
     background-size: cover;
-    background-image: url(../img/pinterest-bg.png);
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
+    @media (max-width: 600px) {
+        background: lighten($main-grey-light, 40%);
+    }
+}
+
+.hero-case-pinterest {
+    background-image: url(../img/pinterest-bg.png);
 }
 
 .circle-num {
@@ -574,6 +580,9 @@ nav {
 
 .case {
     padding: 40px 0;
+    @media (max-width: 992px) {
+        padding: 50px 0 0 0;
+    }
     h4 {
         @extend %title-config;
         color: $main-dark;
@@ -660,6 +669,9 @@ nav {
 .footer-case {
     padding: 50px;
     text-align: center;
+    @media (max-width: 992px) {
+        padding: 0 0 50px 0;
+    }
     .action-btn {
         color: $accent;
         font-weight: 700;
