@@ -166,7 +166,7 @@ h5 {
 
 %title-config {
     letter-spacing: 6px;
-    font-weight: 100;
+    font-weight: 300;
     cursor: default;
 }
 
@@ -325,7 +325,7 @@ nav {
         @extend %title-config;
     }
     h5 {
-        color: darken($main-color, 10%);
+        color: $accent;
         font-weight: 400;
     }
     p {
@@ -346,24 +346,40 @@ nav {
         @extend %title-config;
         color: $main-color;
     }
+}
+
+.skills-list {
+    @media (max-width: 992px) {
+        margin: .7rem 0;
+    }
+    h5 {
+        letter-spacing: 1px;
+        color: $main-light;
+    }
     p {
         @extend %letter-config;
-        color: $main-light;
-        font-size: 1.2rem;
+        text-align: center;
+        font-size: .9rem;
+        text-transform: uppercase;
+        color: $main-color;
     }
-    .skills-list {
+}
+
+.badget {
+    @extend %letter-config;
+    text-align: center;
+    font-size: .9rem;
+    text-transform: uppercase;
+    color: $main-light;
+    img {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: 0 auto;
+    }
+    div {
         @media (max-width: 992px) {
             margin: .7rem 0;
-        }
-        h5 {
-            letter-spacing: 1px;
-            color: $main-light;
-        }
-        p {
-            text-align: center;
-            font-size: .9rem;
-            text-transform: uppercase;
-            color: $main-color;
         }
     }
 }
@@ -376,8 +392,6 @@ nav {
     }
     h3 {
         color: $main-dark;
-        font-weight: 400;
-        transition: .3s;
         position: absolute;
         top: 120px;
         @extend %title-config;
@@ -388,8 +402,7 @@ nav {
     }
     h4 {
         @extend %title-config;
-        color: saturate($main-color, 30%);
-        color: $main-dark;
+        color: $accent;
         @media (max-width: 992px) {
             text-align: center;
         }

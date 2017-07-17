@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,92 +10,79 @@
     <link rel="icon" href="assets\img\favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300i,400,600,700,800" rel="stylesheet">
     <title>Pinterest - Caso de estudio | Michelle More </title>
-  </head>
-  <body class="pattern">
+</head>
+
+<body class="pattern">
     <div class="container">
-      <div class="row case">
-        <a href="index.html" class="brand-logo-dark"></a>
-        <h1 class="col m12">Pinterest</h1>
-        <section class="col m12">
-          <h4 class="col m12">Brief</h4>
-          <p class="col m6 grey-light quote">
-            <i><strong>"Pinterest</strong> es una plataforma que permite a los usuarios crear boards
+        <div class="row case">
+            <a href="index.html" class="brand-logo-dark"></a>
+            <h1 class="col m12">Pinterest</h1>
+            <section class="col m12">
+                <h4 class="col m12">Brief</h4>
+                <p class="col m6 grey-light quote">
+                    <i><strong>"Pinterest</strong> es una plataforma que permite a los usuarios crear boards
               temáticos donde pueden crear, guardar y compartir imágenes (pines) de distintas fuentes. ¿Su misión?
               Conectar a todos en el mundo a través de cosas que encuentren interesantes.
             </i>
-          </p>
-          <p class="col m6 justify-text">
-            El proyecto Pinterest fue parte del Sprint 6 de Herramientas de Productividad en el Bootcamp de <strong>Laboratoria.</strong>
-            El desafío fue recrear un board de un usuario real siguiendo el diseño original de la página.
-            El desarrollo del proyecto fue en un equipo de 3 personas y su duración fue de 2 días.
-          </p>
-        </section>
-        <section class="col m12">
-          <h4 class="col s12">Objetivos</h4>
-          <p class="col m12">
-            - Replicar el diseño para desktop y mobile.
-          </p>
-          <p class="col m12">
-            - Usar el API de Pinterest para traer información del board del usuario: arabelyuska/web-ui/
-          </p>
-          <p class="col m12">
-            - Automatizar tareas con Gulp.
-          </p>
-          <p class="col m12">
-            - Publicar el proyecto en Heroku.
-          </p>
-        </section>
-        <section class="col m12">
-          <h4 class="col s12">Rol en el proyecto</h4>
-          <p class="col m12">
-             Para garantizar la productividad del equipo en el tiempo disponible, me encargué de realizar las tareas
-             para la actualización automatizada de los archivos de Sass, HTML5 y Javacript en carpeta
-             publics. También adicioné una tarea para recargar el navegador una vez que haya detectado algún cambio
-             en unos de los archivos.
-          </p>
-          <p class="col m12">
-             Hice el maquetado de la sección de la barra de navegación para desktop y mobile con el sistema de grillas
-            del Framework Materialize. Tomé en cuenta la visibilidad de sus íconos en ambos casos y el efecto
-            de traslado que tenía en el título del board al deslizar la rueda del mouse hacia abajo.
-          </p>
-          <p class="col m12">
-          Realicé el pedido al API para traer la data del usuario y del board. Ésta información está visible en
-          la sección de encabezado, justo debajo de la barra de navegación.
-          </p>
-          <p class="col m12">
-            Desarrollé el modal que aparece al hacer click en cada pin del board. Para su diseño y funcionalidad
-             utilicé la estructura de Materialize. Para visualizar la información e imagen que se muestra dentro del pin
-             almacené la data del mismo al momento del click mediante un evento jQuery. Una vez cerrado, creé una
-             función que limpiaba el objeto donde se almacenó las propiedades del pin y de los elementos DOM.
-          </p>
-        </section>
-        <section class="col m12">
-          <h4 class="col s12">Proceso</h4>
-          <p class="col m6">
+                </p>
+                <p class="col m6 justify-text">
+                    El proyecto Pinterest fue desarrollado en el Bootcamp de <strong>Laboratoria.</strong> El principal desafío fue recrear un board de un usuario real siguiendo el diseño original de la página.
+                </p>
+            </section>
+            <section class="col m12">
+                <h4 class="col s12">Objetivos</h4>
+                <p class="col m12">
+                    - Replicar el diseño para desktop y mobile.
+                </p>
+                <p class="col m12">
+                    - Usar el API de Pinterest para traer información del board del usuario: arabelyuska/web-ui/
+                </p>
+                <p class="col m12">
+                    - Automatizar tareas con Gulp.
+                </p>
+                <p class="col m12">
+                    - Publicar el proyecto en Heroku.
+                </p>
+            </section>
+            <section class="col m12">
+                <h4 class="col s12">Rol en el proyecto</h4>
+                <p class="col m12">
+                    Para garantizar la productividad del equipo en el tiempo disponible, me encargué de realizar las tareas para la actualización automatizada de los archivos de Sass, HTML5 y Javacript en carpeta publics. También adicioné una tarea para recargar el navegador
+                    una vez que haya detectado algún cambio en unos de los archivos.
+                </p>
+                <p class="col m12">
+                    Hice el maquetado de la sección de la barra de navegación para desktop y mobile con el sistema de grillas del Framework Materialize. Tomé en cuenta la visibilidad de sus íconos en ambos casos y el efecto de traslado que tenía en el título del board al
+                    deslizar la rueda del mouse hacia abajo.
+                </p>
+                <p class="col m12">
+                    Realicé el pedido al API para traer la data del usuario y del board. Ésta información está visible en la sección de encabezado, justo debajo de la barra de navegación.
+                </p>
+                <p class="col m12">
+                    Desarrollé el modal que aparece al hacer click en cada pin del board. Para su diseño y funcionalidad utilicé la estructura de Materialize. Para visualizar la información e imagen que se muestra dentro del pin almacené la data del mismo al momento del
+                    click mediante un evento jQuery. Una vez cerrado, creé una función que limpiaba el objeto donde se almacenó las propiedades del pin y de los elementos DOM.
+                </p>
+            </section>
+            <section class="col m12">
+                <h4 class="col s12">Proceso</h4>
+                <p class="col m6">
 
-          </p>
-          <p class="col m6">
+                </p>
+                <p class="col m6">
 
-          </p>
-          <h5 class="col s12">Herramientas utilizadas:</h5>
-          <p class="col s12">Javascript
-              - HTML5
-              - CSS
-              - jQuery
-              - Materialize
-              - Gulp
-          </p>
-        </section>
-      <section class="col m12">
-          <h4 class="col s12">Aprendizaje</h4>
-          <p class="col s12 justify-text">
-            En este proyecto reforcé mis conocimientos con Gulp, optimizando el proceso
-            de trabajo y aumentando la productividad entre tarea y tarea. De esta manera,
-            logramos llegar a la meta el plazo establecido y cumpliendo todos los requerimientos.
-          </p>
-        </section>
-      </div>
+                </p>
+                <h5 class="col s12">Herramientas utilizadas:</h5>
+                <p class="col s12">Javascript - HTML5 - CSS - jQuery - Materialize - Gulp
+                </p>
+            </section>
+            <section class="col m12">
+                <h4 class="col s12">Aprendizaje</h4>
+                <p class="col s12 justify-text">
+                    En este proyecto reforcé mis conocimientos con Gulp, optimizando el proceso de trabajo y aumentando la productividad entre tarea y tarea. De esta manera, logramos llegar a la meta el plazo establecido y cumpliendo todos los requerimientos.
+                </p>
+            </section>
+        </div>
     </div>
-    <footer><a href="index-html"class="center-align" >Volver a inicio</a></footer>
-  </body>
+    <footer><a href="index-html" class="center-align">Volver a inicio</a></footer>
+</body>
+
 </html>
