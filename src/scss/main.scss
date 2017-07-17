@@ -224,9 +224,9 @@ nav {
         transform: translateY(30%);
         @media (max-width: 992px) {
             background: url(../img/logo_michellemore.svg) no-repeat;
-            transform: translate(-50%, 20%);
+            transform: translate(-45%, 20%);
             width: 86px;
-            height: 39px;
+            height: 37px;
         }
     }
     .button-collapse {
@@ -235,7 +235,7 @@ nav {
         height: 2px;
         background-color: $main-light;
         position: absolute;
-        top: 28px;
+        top: 25px;
         left: -4px;
     }
     .button-collapse::before {
@@ -489,6 +489,9 @@ nav {
     .follow {
         color: $main-color;
         margin: 13px 0 40px;
+        font-family: $nunito;
+        font-weight: 400;
+        letter-spacing: 2px;
     }
 }
 
