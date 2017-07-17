@@ -1,5 +1,4 @@
 $(_ => {
-    //FadeIn de logo intro
     const fadeInScreen = setTimeout(() => {
         $('.black-in').addClass('animated slideOutRight');
         $('body').removeClass('no-scroll');
@@ -119,12 +118,7 @@ $(_ => {
             if (currPos >= YPos.contactPos - 550) {
                 $('.section').addClass('animated fadeInUp');
             }
-
-
-        } else if (currPos < last) {
-            //console.log('subiendo');
-            //console.log(last);
-        }
+          }
     });
 
     $('.img-col').hover(
@@ -145,9 +139,9 @@ $(_ => {
         }
     );
 
+    console.log("%c¿Quieres ver más código? %cTe invito a mi repositorio en %cgithub.com/Mishmore :)", "color: #059b85; font-size:15px; font-weight:bold", "color: #483e45; font-size:15px;", "color: #483e45; font-size:15px;font-weight:bold;");
 });
 
-console.log("%c¿Quieres ver más código? %cTe invito a mi repositorio en %cgithub.com/Mishmore :)", "color: #059b85; font-size:15px; font-weight:bold", "color: #483e45; font-size:15px;", "color: #483e45; font-size:15px;font-weight:bold;");
 
 
 /*
