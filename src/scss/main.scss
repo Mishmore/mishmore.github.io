@@ -232,25 +232,29 @@ nav {
         }
     }
     .button-collapse {
+      cursor: pointer;
+      width: 30px;
+    }
+    .icon-hamburguer {
         display: inline-block;
         width: 15px;
         height: 2px;
         background-color: $main-light;
         position: absolute;
         top: 25px;
-        left: -4px;
+        left: 4px;
     }
-    .button-collapse::before {
+    .icon-hamburguer::before {
         content: '';
         background-color: $main-color;
         top: 6px;
-        @extend .button-collapse;
+        @extend .icon-hamburguer;
     }
-    .button-collapse::after {
+    .icon-hamburguer::after {
         content: '';
         background-color: $main-color;
         top: -6px;
-        @extend .button-collapse;
+        @extend .icon-hamburguer;
     }
     ul.right {
         a {
@@ -281,7 +285,7 @@ nav {
 }
 
 @media only screen and (min-width: 601px) {
-    nav a.button-collapse {
+    nav a.icon-hamburguer {
         height: 2px;
     }
 }
