@@ -80,6 +80,8 @@ svg[class*="logo-animated-"] {
     top: 46%;
     left: 50%;
     transform: translate(-50%, -54%);
+    font-family: $nunito;
+    letter-spacing: 1px;
 }
 
 .case-link {
@@ -156,14 +158,16 @@ h5 {
 }
 
 %letter-config {
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 1.3px;
     font-size: 1.1rem;
+    cursor: default;
 }
 
 %title-config {
     letter-spacing: 6px;
     font-weight: 100;
+    cursor: default;
 }
 
 .relative {
@@ -177,6 +181,9 @@ h5 {
 .margin-b-h3 {
     margin-top: 0px;
     margin-bottom: 45px;
+    @media (max-width: 992px) {
+        margin-bottom: 30px;
+    }
 }
 
 .padding-section {
@@ -187,11 +194,8 @@ h5 {
 }
 
 .navbar-fixed {
-    height: 60px;
+    height: 9.5vh;
     transition: .2s ease;
-    @media (max-width: 992px) {
-        height: 60px;
-    }
 }
 
 .grey-light {
@@ -204,12 +208,11 @@ h5 {
 
 nav {
     padding: 0 60px;
-    height: 60px;
+    height: 9.5vh;
     line-height: 60px;
     background-color: $main-grey;
     box-shadow: none;
     @media (max-width: 992px) {
-        height: 60px;
         padding: 0 20px;
     }
     .brand-logo {
@@ -221,7 +224,7 @@ nav {
         transform: translateY(30%);
         @media (max-width: 992px) {
             background: url(../img/logo_michellemore.svg) no-repeat;
-            transform: translate(-50%, 30%);
+            transform: translate(-50%, 20%);
             width: 86px;
             height: 39px;
         }
@@ -275,7 +278,7 @@ nav {
 
 .hero {
     @include sectionSize(darken($main-color, 10%));
-    height: 95vh;
+    height: 90.5vh;
     position: relative;
     background: url(../img/portada.png) no-repeat left 30%;
     background-size: cover;
@@ -283,12 +286,15 @@ nav {
     color: $main-light;
     @media (max-width: 992px) {
         background: darken($main-color, 10%);
-        height: 100vh;
+        height: 90.5vh;
     }
     .row {
         position: absolute;
         top: 20vh;
         width: 80%;
+        @media (max-width: 992px) {
+            top: 2vh;
+        }
     }
     h3 {
         margin: 0;
@@ -325,6 +331,11 @@ nav {
     p {
         @extend %letter-config;
     }
+    .about-text {
+        @media (max-width: 992px) {
+            margin: .7rem 0;
+        }
+    }
 }
 
 .skills {
@@ -341,6 +352,9 @@ nav {
         font-size: 1.2rem;
     }
     .skills-list {
+        @media (max-width: 992px) {
+            margin: .7rem 0;
+        }
         h5 {
             letter-spacing: 1px;
             color: $main-light;
@@ -408,41 +422,71 @@ nav {
 }
 
 .contact {
-    height: 80vh;
+    @include sectionSize(darken($main-color, 10%));
+    height: 89vh;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 200px;
+    @media (max-width: 992px) {
+        padding: 70px 0 2px;
+    }
     h3 {
         @extend %title-config;
-        color: $main-dark;
-    }
-    span {
-        display: inline-block;
-        font-size: 1.4rem;
-        margin-right: 15px;
-        color: $main-dark;
+        margin-bottom: 65px;
+        @media (max-width: 992px) {
+            margin-bottom: 30px;
+        }
     }
     p {
-        display: inline-block;
         @extend %letter-config;
-        font-size: 1.4rem;
-        color: $main-dark;
     }
-    .col.m4 {
-        display: flex;
-        justify-content: flex-end;
+    span[class="icon-"] {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .icon-phone {
+        font-size: 2.9rem;
+        display: block;
+        margin-bottom: 36px;
+    }
+    .icon-envelope {
+        font-size: 2.6rem;
+        display: block;
+        margin-bottom: 40px;
     }
     .social {
-        display: inline-block;
         font-size: 2rem;
-        color: $main-dark;
-        margin: 12px 10px;
-        text-align: right;
+        margin: 0 auto;
+        color: #ffffff;
+        transition: .2s ease;
+        margin: 15px;
+        display: inline-block;
     }
-    .social:hover {
-        color: $main-color;
+    .social:hover,
+    .action-btn:hover {
+        transform: translateY(5px);
+    }
+    .action-btn {
+        font-family: $nunito;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 200;
+        color: #fff;
+        display: inline-block;
+        border: 1px solid;
+        padding: 4px 22px;
+        transition: .2s ease;
+    }
+    .divider {
+        width: 100%;
+    }
+    .section {
+        margin: 2rem 0;
     }
 }
 
 .footer {
-    height: 10vh;
+    height: 11vh;
     width: 100%;
     background-color: $main-grey;
     color: $main-light;
@@ -452,6 +496,9 @@ nav {
     justify-content: center;
     @media (max-width: 992px) {
         height: auto;
+    }
+    .credits {
+        cursor: default;
     }
 }
 

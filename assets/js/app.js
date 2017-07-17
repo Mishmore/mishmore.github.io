@@ -1,8 +1,6 @@
 $(_ => {
     //FadeIn de logo intro
     const fadeInScreen = setTimeout(() => {
-        $('.logo-animated-front').fadeOut(400);
-        $('.logo-animated-back').fadeOut(400);
         $('.black-in').addClass('animated slideOutRight');
         $('body').removeClass('no-scroll');
     }, 3500);
@@ -31,8 +29,8 @@ $(_ => {
         aboutPos: $("#about").offset().top,
         skillsPos: $("#skills").offset().top,
         firstProj: $("#portfolio").offset().top + 50,
-        secondProj: $("#p2").offset().top - 90,
-        thirdProj: $("#p3").offset().top - 90,
+        secondProj: $("#p2").offset().top - 85,
+        thirdProj: $("#p3").offset().top - 85,
         contactPos: $("#contact").offset().top
     }
 
@@ -117,10 +115,13 @@ $(_ => {
             if (currPos >= YPos.thirdProj - 410) {
                 $('.project-3').addClass('animated fadeInLeftBig');
             }
+            if (currPos >= YPos.contactPos - 550) {
+                $('.section').addClass('animated fadeInUp');
+            }
 
         } else if (currPos < last) {
-            console.log('subiendo');
-            console.log(last);
+            //console.log('subiendo');
+            //console.log(last);
         }
     });
 
@@ -130,6 +131,15 @@ $(_ => {
         },
         function() {
             $(this).removeClass('animated pulse');
+        }
+    );
+
+    $('.credits').hover(
+        function() {
+            $(this).addClass('animated flash');
+        },
+        function() {
+            $(this).removeClass('animated flash');
         }
     );
 
