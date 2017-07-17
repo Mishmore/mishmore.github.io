@@ -82,6 +82,8 @@ svg[class*="logo-animated-"] {
     transform: translate(-50%, -54%);
     font-family: $nunito;
     letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .case-link {
@@ -104,7 +106,7 @@ svg[class*="logo-animated-"] {
 }
 
 rect[class*="rect-"] {
-    stroke-dasharray: 240;
+    stroke-dasharray: 304;
     fill: none;
     stroke-width: 2;
     stroke-miterlimit: 10;
@@ -126,7 +128,7 @@ rect[class*="rect-"] {
 
 .links {
     @media (max-width: 992px) {
-        width: 185px;
+        width: 247px;
         margin: 0 auto;
     }
 }
@@ -415,7 +417,7 @@ nav {
     div[class*="project-"] {
         @extend %letter-config;
         transition: .3s;
-        margin-top: 130px;
+        margin-top: 90px;
         @media (max-width: 992px) {
             position: relative;
             margin-top: 0;
@@ -431,6 +433,12 @@ nav {
     }
     img {
         display: block;
+    }
+}
+
+.yape {
+    @media (max-width: 600px) {
+        margin-bottom: 90px !important;
     }
 }
 
@@ -493,11 +501,6 @@ nav {
     }
 }
 
-.social:hover,
-.action-btn:hover {
-    transform: translateY(5px);
-}
-
 .action-btn {
     font-family: $nunito;
     text-transform: uppercase;
@@ -508,6 +511,12 @@ nav {
     border: 1px solid;
     padding: 4px 22px;
     transition: .2s ease;
+    display: inline-block;
+}
+
+.social:hover,
+.action-btn:hover {
+    transform: translateY(5px);
 }
 
 .footer {
@@ -564,6 +573,14 @@ div[class*="hero-case"] {
     background-image: url(../img/pinterest-bg.png);
 }
 
+.hero-case-pokedex {
+    background-image: url(../img/pokedex-bg.png);
+}
+
+.hero-case-yape {
+    background-image: url(../img/yape-bg.png);
+}
+
 .circle-num {
     color: $accent;
     border: 1px solid $accent;
@@ -603,23 +620,19 @@ div[class*="hero-case"] {
     section {
         margin-bottom: 50px;
     }
+    .links {
+        width: 285px;
+        margin: 20px auto;
+        .rectangle-div {
+            margin-right: 20px;
+        }
+    }
 }
 
 .objetivos {
     h4 {
         margin-bottom: 35px;
     }
-}
-
-.github-link .action-btn {
-    color: #141027;
-    text-align: center;
-    border-color: #141027;
-    display: block;
-    font-weight: 400;
-    width: 282px;
-    margin: 0 auto;
-    margin-top: 1.5rem;
 }
 
 .brand-logo-dark {
