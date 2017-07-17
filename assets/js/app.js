@@ -121,6 +121,14 @@ $(_ => {
           }
     });
 
+    $('nav a').on('click', function(){
+      $('body,html').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+      }, 700);
+      return false;
+    });
+
+
     $('.img-col').hover(
         function() {
             $(this).addClass('animated pulse');
