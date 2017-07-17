@@ -158,7 +158,7 @@ h5 {
 }
 
 %letter-config {
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 1.3px;
     font-size: 1.1rem;
     cursor: default;
@@ -422,37 +422,39 @@ nav {
 }
 
 .contact {
-    @include sectionSize(darken($main-color, 10%));
+    @include sectionSize($main-grey);
     height: 89vh;
-    color: #ffffff;
     text-align: center;
-    font-weight: 200px;
+    font-weight: 200;
     @media (max-width: 992px) {
         padding: 70px 0 2px;
     }
     h3 {
         @extend %title-config;
         margin-bottom: 65px;
+        color: $main-color;
         @media (max-width: 992px) {
             margin-bottom: 30px;
         }
     }
     p {
         @extend %letter-config;
+        font-weight: 200;
+        color: #ffffff;
     }
-    span[class="icon-"] {
+    span[class*="icon-"] {
         display: inline-block;
-        margin-right: 15px;
+        color: $main-color;
     }
     .icon-phone {
         font-size: 2.9rem;
         display: block;
-        margin-bottom: 36px;
+        margin-bottom: 30px;
     }
     .icon-envelope {
         font-size: 2.6rem;
         display: block;
-        margin-bottom: 40px;
+        margin-bottom: 34px;
     }
     .social {
         font-size: 2rem;
@@ -479,17 +481,22 @@ nav {
     }
     .divider {
         width: 100%;
+        background-color: $main-grey-light;
     }
     .section {
         margin: 2rem 0;
+    }
+    .follow {
+        color: $main-color;
+        margin: 13px 0 40px;
     }
 }
 
 .footer {
     height: 11vh;
     width: 100%;
-    background-color: $main-grey;
-    color: $main-light;
+    background-color: $main-color;
+    color: $main-grey;
     @extend %letter-config;
     display: flex;
     align-items: center;
@@ -509,7 +516,7 @@ nav {
 .case {
     padding: 40px 0;
     p {
-        font-weight: 100;
+        font-weight: 300;
         letter-spacing: 1.3px;
         font-size: 1.2rem;
     }
