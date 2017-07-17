@@ -140,6 +140,7 @@ $(_ => {
     );
 
     console.log("%c¿Quieres ver más código? %cTe invito a mi repositorio en %cgithub.com/Mishmore :)", "color: #059b85; font-size:15px; font-weight:bold", "color: #483e45; font-size:15px;", "color: #483e45; font-size:15px;font-weight:bold;");
+
 /*
     document.addEventListener("wheel", function(e) {
       const currPos = window.pageYOffset || document.documentElement.scrollTop;
