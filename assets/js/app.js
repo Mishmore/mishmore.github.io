@@ -120,6 +120,7 @@ $(_ => {
                 $('.section').addClass('animated fadeInUp');
             }
 
+
         } else if (currPos < last) {
             //console.log('subiendo');
             //console.log(last);

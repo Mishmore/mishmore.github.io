@@ -267,8 +267,16 @@ nav {
         }
     }
     ul.side-nav {
-        width: 230px;
-        background-color: $main-light;
+        width: 200px;
+        background-color: $main-grey;
+        @extend %letter-config;
+        li {
+          a {
+            font-family: $nunito;
+            color: $main-color;
+            text-align: center;
+          }
+        }
     }
 }
 
@@ -442,6 +450,13 @@ nav {
     }
 }
 
+.project-1 .rotate {
+  height: 32px;
+  @media (max-width: 992px) {
+    height: 33px;
+  }
+}
+
 .contact {
     @include sectionSize($main-grey);
     height: 89vh;
@@ -556,6 +571,10 @@ nav {
     p {
         @extend %letter-config;
     }
+    footer {
+      background-color: $main-grey;
+      color: $main-light;
+    }
 }
 
 div[class*="hero-case"] {
@@ -605,6 +624,9 @@ div[class*="hero-case"] {
         color: $main-dark;
         font-weight: 100;
         margin: 0 0 0 0;
+        @media (max-width: 600px) {
+          text-align: center;
+        }
     }
     h1 {
         margin-bottom: 50px;
@@ -616,6 +638,9 @@ div[class*="hero-case"] {
         letter-spacing: 1.3px;
         font-size: 1.2rem;
         margin-bottom: 20px;
+        @media (max-width: 600px) {
+          text-align: center;
+        }
     }
     section {
         margin-bottom: 50px;
