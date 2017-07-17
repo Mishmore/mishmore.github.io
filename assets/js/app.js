@@ -39,60 +39,6 @@ $(_ => {
         }, 700);
     }
 
-    $(window).on('keyup keypress', (event) => {
-        const currPos = $(window).scrollTop() || window.pageYOffset || document.documentElement.scrollTop;
-        if (event.which == downKey) {
-            if (currPos > YPos.hero && currPos < YPos.aboutPos) {
-                Scroll(YPos.aboutPos);
-            }
-            if (currPos >= YPos.aboutPos && currPos < YPos.skillsPos) {
-                Scroll(YPos.skillsPos);
-                return false;
-            }
-            if (currPos >= YPos.skillsPos && currPos < YPos.firstProj) {
-                Scroll(YPos.firstProj);
-                return false;
-            }
-            if (currPos >= YPos.firstProj && currPos < YPos.secondProj) {
-                Scroll(YPos.secondProj);
-                return false;
-            }
-            if (currPos >= YPos.secondProj && currPos < YPos.thirdProj) {
-                Scroll(YPos.thirdProj);
-                return false;
-            }
-            if (currPos >= YPos.thirdProj && currPos < YPos.contactPos) {
-                Scroll(YPos.contactPos);
-                return false;
-            }
-        } else if (event.which == upKey) {
-            if (currPos <= YPos.aboutPos) {
-                Scroll(YPos.hero);
-                return false;
-            }
-            if (currPos <= YPos.skillsPos) {
-                Scroll(YPos.aboutPos);
-                return false;
-            }
-            if (currPos <= YPos.firstProj) {
-                Scroll(YPos.skillsPos);
-                return false;
-            }
-            if (currPos <= YPos.secondProj && currPos > YPos.firstProj) {
-                Scroll(YPos.firstProj);
-                return false;
-            }
-            if (currPos <= YPos.thirdProj && currPos > YPos.secondProj) {
-                Scroll(YPos.secondProj);
-                return false;
-            }
-            if (currPos <= YPos.contactPos && currPos > YPos.thirdProj) {
-                Scroll(YPos.thirdProj);
-                return false;
-            }
-        }
-    });
-
     let last = 0;
 
     $(window).scroll(function(e) {
