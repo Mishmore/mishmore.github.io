@@ -149,32 +149,4 @@ $(_ => {
 
     console.log("%c¿Quieres ver más código? %cTe invito a mi repositorio en %cgithub.com/Mishmore :)", "color: #059b85; font-size:15px; font-weight:bold", "color: #483e45; font-size:15px;", "color: #483e45; font-size:15px;font-weight:bold;");
 
-/*
-    document.addEventListener("wheel", function(e) {
-      const currPos = window.pageYOffset || document.documentElement.scrollTop;
-      let delta;
-      if (event.wheelDelta) {
-        delta = event.wheelDelta;
-      } else {
-        delta = -1 *event.deltaY;
-      }
-
-      if (delta < 0) {
-        console.log('down');
-        if (currPos > YPos.hero && currPos < YPos.aboutPos) {
-          Scroll(YPos.aboutPos);
-          return false;
-        }
-      }
-
-      else if (delta > 0) {
-        console.log('up');
-        if (currPos <= YPos.skillsPos) {
-          Scroll(YPos.hero);
-          return false;
-        }
-      }
-
-    }, false);
-    */
 });
