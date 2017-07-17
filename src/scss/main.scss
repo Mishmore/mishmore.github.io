@@ -477,21 +477,6 @@ nav {
         margin: 15px;
         display: inline-block;
     }
-    .social:hover,
-    .action-btn:hover {
-        transform: translateY(5px);
-    }
-    .action-btn {
-        font-family: $nunito;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 200;
-        color: #fff;
-        display: inline-block;
-        border: 1px solid;
-        padding: 4px 22px;
-        transition: .2s ease;
-    }
     .divider {
         width: 100%;
         background-color: $main-grey-light;
@@ -506,6 +491,23 @@ nav {
         font-weight: 400;
         letter-spacing: 2px;
     }
+}
+
+.social:hover,
+.action-btn:hover {
+    transform: translateY(5px);
+}
+
+.action-btn {
+    font-family: $nunito;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 200;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid;
+    padding: 4px 22px;
+    transition: .2s ease;
 }
 
 .footer {
@@ -525,18 +527,53 @@ nav {
     }
 }
 
+.case-study {
+    .bg-text {
+        position: relative;
+        .row {
+            position: absolute;
+            top: 150px;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    h1 {
+        @extend %title-config;
+        color: $main-dark;
+        font-weight: 100;
+        margin: 0 0 0 0;
+    }
+    p {
+        @extend %letter-config;
+    }
+}
+
+.hero-case {
+    background-size: cover;
+    background-image: url(../img/pinterest-bg.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.circle-num {
+    color: $accent;
+    border: 1px solid $accent;
+    border-radius: 50px;
+    padding: 11px 17px;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+}
+
 .case>.col {
     padding: 0;
 }
 
 .case {
     padding: 40px 0;
-    p {
-        font-weight: 300;
-        letter-spacing: 1.3px;
-        font-size: 1.2rem;
-    }
-    h1,
     h4 {
         @extend %title-config;
         color: $main-dark;
@@ -548,32 +585,83 @@ nav {
         padding: 0 1.1rem !important;
     }
     h5 {
-        color: #59cbaf;
-        font-weight: 100;
+        color: $accent;
+        font-weight: 400;
         letter-spacing: 1.3px;
         font-size: 1.2rem;
-    }
-    .pattern {
-        background-image: url(../img/pattern-03-03.svg);
-        background-attachment: fixed;
-    }
-    .over-pattern {
-        background-color: $main-light;
-        border-radius: 2px;
-    }
-    .brand-logo-dark {
-        background: url(../img/logo_name-dark-01.svg) no-repeat;
-        background-size: contain;
-        width: 235px;
-        height: 35px;
-        display: inline-block;
-        margin-bottom: 90px;
+        margin-bottom: 20px;
     }
     section {
         margin-bottom: 50px;
-        .quote {
-            font-size: 1.6rem;
-            color: lighten($main-grey, 30%);
-        }
+    }
+}
+
+.objetivos {
+    h4 {
+        margin-bottom: 35px;
+    }
+}
+
+.github-link .action-btn {
+    color: #141027;
+    text-align: center;
+    border-color: #141027;
+    display: block;
+    font-weight: 400;
+    width: 282px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+.brand-logo-dark {
+    background: url(../img/logo_name-dark-01.svg) no-repeat;
+    background-size: contain;
+    width: 235px;
+    height: 35px;
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+}
+
+.quote {
+    font-size: 1.6rem;
+    color: lighten($main-grey, 10%);
+}
+
+.check {
+    display: inline-block;
+    background: transparent;
+    height: 7px;
+    width: 14px;
+    top: 16px;
+    left: 23px;
+    margin-right: 12px;
+    border: 1px solid $accent;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+
+.check-height {
+    height: 7px;
+}
+
+.check-width {
+    width: 14px;
+}
+
+.tools-img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 25px auto;
+}
+
+.footer-case {
+    padding: 50px;
+    text-align: center;
+    .action-btn {
+        color: $accent;
+        font-weight: 700;
     }
 }
