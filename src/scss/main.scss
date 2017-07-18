@@ -102,7 +102,7 @@ svg[class*="logo-animated-"] {
 }
 
 .rectangle-div:hover rect[class*="rect-"] {
-    animation: dashRect 1s ease;
+    animation: dashRect 1s ease-out;
 }
 
 rect[class*="rect-"] {
@@ -135,7 +135,7 @@ rect[class*="rect-"] {
 
 @keyframes dashRect {
     from {
-        stroke-dashoffset: 240;
+        stroke-dashoffset: 304;
     }
     to {
         stroke-dashoffset: 0;
@@ -202,6 +202,18 @@ h5 {
 
 .grey-light {
     color: $main-grey-light;
+}
+
+.margin-t-130 {
+  margin-top: 130px;
+  @media (max-width: 992px) {
+    margin-top: 15px;
+  }
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .row .col {
@@ -303,11 +315,8 @@ nav {
         height: 90.5vh;
     }
     .row {
-        position: absolute;
-        top: 20vh;
         width: 80%;
         @media (max-width: 992px) {
-            top: 2vh;
         }
     }
     h3 {

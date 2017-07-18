@@ -68,12 +68,12 @@ $(_ => {
     });
 
     $('nav a').on('click', function(){
-      $('body,html').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-      }, 700);
-      return false;
+      const id =  $(this).attr('href');
+        $('body,html').animate({
+          scrollTop: $( id ).offset().top
+        }, 700);
+        return false;
     });
-
 
     $('.img-col').hover(
         function() {
