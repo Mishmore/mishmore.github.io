@@ -63,6 +63,7 @@ $(_ => {
             }
             if (currPos >= YPos.contactPos - 550) {
                 $('.section').addClass('animated fadeInUp');
+                $('.divider').addClass('animated fadeInUp');
             }
           }
     });
