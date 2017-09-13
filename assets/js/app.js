@@ -1,8 +1,19 @@
 $(_ => {
-    const fadeInScreen = setTimeout(() => {
-        $('.black-in').addClass('animated slideOutRight');
-        $('body').removeClass('no-scroll');
-    }, 3500);
+    $('.lang-es').on('click', e => {
+        $('.black-in svg').addClass('animated fadeOut');
+        $('.lang').addClass('animated fadeOut');
+        setTimeout(function() {
+            window.location.href = './portafolio.html';
+        }, 750);
+    });
+
+    $('.lang-en').on('click', e => {
+        $('.black-in svg').addClass('animated fadeOut');
+        $('.lang').addClass('animated fadeOut');
+        setTimeout(function() {
+            window.location.href = './portfolio.html';
+        }, 750);
+    });
 
     $(".button-collapse").sideNav();
 

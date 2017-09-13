@@ -751,3 +751,23 @@ div[class*="hero-case"] {
         width: auto;
     }
 }
+
+.lang {
+    margin: 0 auto;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    cursor: pointer;
+    span {
+        margin: 0 10px;
+        color: #ffffff;
+        font-family: $nunito;
+        font-weight: 300;
+    }
+    span:hover {
+        color: $main-color;
+    }
+}
+
+
