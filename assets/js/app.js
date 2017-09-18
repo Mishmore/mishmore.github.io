@@ -3,7 +3,7 @@ $(_ => {
         $('.black-in svg').addClass('animated fadeOut');
         $('.lang').addClass('animated fadeOut');
         setTimeout(function() {
-            window.location.href = './portafolio.html';
+            window.location.href = './es/portafolio.html';
         }, 750);
     });
 
@@ -11,7 +11,7 @@ $(_ => {
         $('.black-in svg').addClass('animated fadeOut');
         $('.lang').addClass('animated fadeOut');
         setTimeout(function() {
-            window.location.href = './portfolio.html';
+            window.location.href = './en/portfolio.html';
         }, 750);
     });
 
